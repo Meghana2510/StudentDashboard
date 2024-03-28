@@ -1,0 +1,59 @@
+<div class="p-5">
+    <form class="w-100 m-auto" [formGroup]="studentForm" (ngSubmit)="submitAdd()">
+      <div class="mb-3">
+        <label for="studentID" class="form-label">Student ID</label>
+        <input #studentID formControlName="studentID" type="integer" id="studentID" class="form-control">
+        <span *ngIf="studentForm.controls['studentID'].touched && studentForm.controls['studentID'].invalid">StudentID is required field </span>
+      </div>
+      
+      <div class="mb-3">
+        <label for="sName" class="form-label">Name</label>
+        <input #sName formControlName='sName' type="text" id="sName" class="form-control">
+        <span
+          *ngIf="studentForm.controls['sName'].touched && (studentForm.controls['sName'].invalid)">Enter a valid name</span>
+      </div>
+      
+      <div class="mb-3">
+        <label for="sAddress" class="form-label">Address</label>
+        <input #sAddress formControlName='sAddress' type="text" id="sAddress" class="form-control">
+        <span
+         *ngIf="studentForm.controls['sAddress'].touched && studentForm.controls['sAddress'].invalid">Enter valid Address
+      </span>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input #email formControlName='email' type="email" id="email" class="form-control">
+        <span
+          *ngIf="studentForm.controls['email'].touched && (studentForm.controls['email'].invalid)">Enter valid email</span>
+      </div>
+      <div class="mb-3">
+        <label for="sPhone" class="form-label">Mobile</label>
+        <input #sPhone formControlName='sPhone' type="tel" id="sPhone" class="form-control">
+        <span
+          *ngIf="studentForm.controls['sPhone'].touched && (studentForm.controls['sPhone'].invalid)">Enter valid 10-digit phone number</span>
+      </div>
+      <div class="mb-3">
+        <label for="percentage" class="form-label">Percentage</label>
+        <input #percentage formControlName='percentage' type="number" id="percentage" class="form-control">
+        <span
+          *ngIf="studentForm.controls['percentage'].touched && (studentForm.controls['percentage'].invalid)">Not
+          valid</span>
+      </div>
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input #username formControlName='username' type="text" id="username" class="form-control">
+        <span
+          *ngIf="studentForm.controls['username'].touched && (studentForm.controls['username'].invalid)">Not
+          valid</span>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input #password formControlName='password' type="password" id="password" class="form-control">
+        <span
+          *ngIf="studentForm.controls['password'].touched && (studentForm.controls['password'].invalid)">Not
+          valid</span>
+      </div>
+      <button type="submit" class="button bg-second-brown text-white hover-brown">Add</button>
+    </form>
+  </div>
+  
