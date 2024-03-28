@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card mt-5" style="align-items: center;">
+      <h1>STUDENT GRID</h1>
+  </div>
+
+  <div class="card" mt-5 style="padding: 25px;">
+     <form  #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+       <div class="form-group">
+         <label for="sname"> Student name: </label>
+         <input type="text" #sname (ngModel)= "sname" name="sname" id="sname" class="form-control" placeholder=" enter student name">
+       </div>
+
+       <div class="form-group">
+        <label for="percentage"> Percentage: </label>
+        <input type="number" #percentage (ngModel)= "percentage" percentage="percentage" id="percentage" class="form-control" placeholder=" enter percentage">
+      </div>
+
+      <div class="form-group">
+        <label for="sphone"> sphone: </label>
+        <input type="number" #sphone (ngModel)= "sphone"sphone="sphone" id="sphone" class="form-control" placeholder=" enter student phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="studentid"> studentid: </label>
+        <input type="number" #studentid (ngModel)= "studentid" studentid="studentid" id="studentid" class="form-control" placeholder=" enter student ID number">
+      </div>
+
+      <div class="form-group">
+        <label for="saddress"> saddress: </label>
+        <input type="text" #saddress (ngModel)= "saddress"saddress="saddress" id="saddress" class="form-control" placeholder=" enter student Address">
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value ="Register" class="btn btn-primary w-100" >
+      </div>
+
+     </form>
+  </div>    
+</div>
