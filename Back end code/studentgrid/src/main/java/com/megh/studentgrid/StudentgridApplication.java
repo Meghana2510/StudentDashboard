@@ -1,0 +1,13 @@
+package com.megh.studentgrid;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class StudentgridApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(StudentgridApplication.class, args);
+	}
+
+}
